@@ -53,7 +53,7 @@ if submitted:
 
     st.set_option('deprecation.showPyplotGlobalUse', False)
     cluster = loaded_model.predict(data)[0]
-    st.write('Data Belongs to Cluster', cluster)
+    st.write('Customer Belongs to Cluster', cluster)
     
     if 'Cluster' in df.columns:
         cluster_df = df[df['Cluster'] == cluster]
