@@ -9,7 +9,7 @@ st.title("Market Segmentation")
 import os
 
 # Change the working directory
-os.chdir("D:/clusteringProject")
+os.chdir("D:\clusteringProject")
 
 
 with st.form("my_form"):
@@ -42,13 +42,13 @@ with st.form("my_form"):
 
 if submitted:
     if model_type == "K-means":
-        loaded_model = pickle.load(open("D:/clusteringProject/final_model.sav", 'rb'))
+        loaded_model = pickle.load(open("D:\clusteringProject/final_model.sav", 'rb'))
         df = pd.read_csv("Clustered_Customer_Data.csv")
     elif model_type == "Agglomerative":
-        loaded_model = pickle.load(open("D:/clusteringProject/agg_final_model.sav", 'rb'))
+        loaded_model = pickle.load(open("D:\clusteringProject/agg_final_model.sav", 'rb'))
         df = pd.read_csv("agg_Clustered_Customer_Data.csv")
     elif model_type == "DBSCAN":
-        loaded_model = pickle.load(open("D:/clusteringProject/dbscan_final_model.sav", 'rb'))
+        loaded_model = pickle.load(open("D:\clusteringProject/dbscan_final_model.sav", 'rb'))
         df = pd.read_csv("dbscan_Clustered_Customer_Data.csv")
 
     st.set_option('deprecation.showPyplotGlobalUse', False)
